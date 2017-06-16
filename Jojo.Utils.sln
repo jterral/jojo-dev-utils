@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jojo.Utils.Helpers", "Jojo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jojo.Utils.Patterns", "Jojo.Utils.Patterns\Jojo.Utils.Patterns.csproj", "{17A59300-860A-491C-B38A-03E7757CF77C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jojo.Utils.UnitTests", "Jojo.Utils.UnitTests\Jojo.Utils.UnitTests.csproj", "{E3FA2698-449A-4F27-8B78-076D081502DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{17A59300-860A-491C-B38A-03E7757CF77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17A59300-860A-491C-B38A-03E7757CF77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17A59300-860A-491C-B38A-03E7757CF77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FA2698-449A-4F27-8B78-076D081502DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FA2698-449A-4F27-8B78-076D081502DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FA2698-449A-4F27-8B78-076D081502DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FA2698-449A-4F27-8B78-076D081502DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
