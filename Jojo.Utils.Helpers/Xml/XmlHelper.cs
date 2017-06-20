@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Jojo.Utils.Helpers.XSchema
+namespace Jojo.Utils.Helpers.Xml
 {
     /// <summary>
     /// Utilitaire de sérialisation ou dé-sérialisation d'un fichier XML.

@@ -33,5 +33,23 @@ namespace Jojo.Utils.Extensions.System
         {
             return enumValue.GetType().GetMember(enumValue.ToString()).First().GetCustomAttribute<TAttribute>();
         }
+
+        /// <summary>
+        /// Conversion d'une chaine de caractère en énumération.
+        /// </summary>
+        /// <typeparam name="T">Le type de l'énumération.</typeparam>
+        /// <param name="value">La chaine de caractère à convertir.</param>
+        /// <param name="defaultValue">La valeur par défaut à positionner.</param>
+        /// <returns>Retourne l'énumération convertie.</returns>
+        public static T ToEnum<T>(this string value, T defaultValue) where T : struct
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return defaultValue;
+            }
+
+            T result;
+            return Enum.TryParse<T>(value, true, out result) ? result : defaultValue;
+        }
     }
 }

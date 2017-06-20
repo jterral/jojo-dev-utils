@@ -28,7 +28,7 @@ namespace Jojo.Utils.Helpers.Configuration
         /// <remarks>Si une erreur de conversion se produit, une exception est levée.</remarks>
         public static T ConfigSetting<T>(string settingName)
         {
-            return ConfigSetting<T>(settingName, CultureInfo.CurrentCulture);
+            return ConfigSetting<T>(settingName, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -47,7 +47,20 @@ namespace Jojo.Utils.Helpers.Configuration
             Type t = typeof(T);
             t = Nullable.GetUnderlyingType(t) ?? t;
 
-            return value == null ? default(T) : (T)Convert.ChangeType(value, t, culture);
+            T result = default(T);
+            try
+            {
+                if (value != null)
+                {
+                    result = (T)Convert.ChangeType(value, t, culture);
+                }
+            }
+            catch (Exception)
+            {
+                // TODO : Implémentation de la logique d'exception
+            }
+
+            return result;
         }
     }
 

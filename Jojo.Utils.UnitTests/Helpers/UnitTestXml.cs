@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Jojo.Utils.Helpers.XSchema;
+using Jojo.Utils.Helpers.Xml;
 
 namespace Jojo.Common.UnitTest.Helpers
 {

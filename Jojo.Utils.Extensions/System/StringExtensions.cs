@@ -18,5 +18,16 @@ namespace Jojo.Utils.Extensions.System
         {
             return source.IndexOf(value, comparisonType) >= 0;
         }
+
+        /// <summary>
+        /// Comparaison de chaines de caractères avec insensibilité à la casse.
+        /// </summary>
+        /// <param name="a">La chaine de caractères à comparer.</param>
+        /// <param name="b">La chaine de caractères avec laquelle comparer.</param>
+        /// <returns>Retourne <c>true</c> si les chaines de caractères sont identiques, <c>false</c> sinon.</returns>
+        public static bool EqualsInvariant(this string a, string b)
+        {
+            return string.Equals(a, b, StringComparison.InvariantCultureIgnoreCase);
+        }
     }
 }
